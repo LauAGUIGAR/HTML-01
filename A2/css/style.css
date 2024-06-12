@@ -1,0 +1,168 @@
+/*Laura Aguirre Garcia
+200595782*/
+body {
+    font-family: "Playfair Display SC", serif;
+    background-color: cornsilk;
+    color: darkolivegreen;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: "Playfair Display SC", sans-serif;
+    text-align: center;
+}
+
+p, a, li {
+    font-family: "Playfair Display SC", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: cornsilk;
+    padding: 0 20px;
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+}
+
+header > div > a > img {
+    height: 120px;
+    width: auto;
+}
+
+header>nav {
+    display: flex;
+}
+
+header>nav>menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    /* This gives a space in between the links*/
+}
+
+header>nav>menu>li>a {
+    color: darkolivegreen;
+}
+
+/* Masthead */
+.lesson-masthead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkolivegreen;
+    height: 25vh;
+}
+
+.lesson-masthead h1 {
+    color: cornsilk;
+    font-size: 58px;
+}
+
+/* Main content */
+.flex-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+main {
+    width: 95%;
+}
+
+main > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>section>h2{
+    display: flex;
+    font-size: 50px;
+    line-height: 60px;
+    height: auto;
+    width: 33%;
+    text-align: center;
+}
+main > section > div img,
+main > section > div video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 95%;
+    height: auto;
+/*Small note: I couldn't figure out how to make the images smaller without messing everything else*/
+}
+/* If your section has an ID you can call it instead of doing section>section style it helps to not get lost in the nested sections and divs */
+#Order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+#Pay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+/*Forms*/
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form div {
+    margin-bottom: 15px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea,
+button[type="submit"] {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        background-color: cornsilk;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+
+    footer > div {
+        display: flex;
+    }
+
+    footer > div > a > img {
+        height: 100px;
+        width: auto;
+    }
+
+    footer > div > menu {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    footer > div > menu > li > a {
+        color: darkolivegreen;
+    }
+

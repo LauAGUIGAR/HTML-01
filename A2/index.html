@@ -1,0 +1,157 @@
+<!--Laura Aguirre Garcia
+200595782-->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <!--Meta Data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Assignment 2 Pizza shop">
+    <title>Perfetto Pizzeria</title>
+    <!-- Add our fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Add our CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div>
+        <!-- This will get the logo to take us to home when clicked -->
+        <a href="index.html">
+            <img src="./img/LOGO.png" alt="Header Logo">
+        </a>
+    </div>
+    <nav>
+        <menu>
+            <!-- Get the links to our home page (the one you are in) and also take you to the order page-->
+            <li><a href="index.html">Home</a> </li>
+            <!--This was the original line when it was more than page -->
+           <!-- <li><a target="_self" href="index2.html">Order</a> </li>-->
+            <!-- now you have href it to the section that represents that page -->
+            <li><a href=#Order>Order</a> </li>
+            <li><a href=#Pay>Pay</a> </li>
+        </menu>
+    </nav>
+</header>
+<!-- Masthead is like a banner of some sorts? It's like the main heading-->
+<section class="lesson-masthead">
+    <h1> Savor the True Taste of Italy </h1>
+</section>
+<!-- Create a flex container so we can use flex on CSS-->
+<div class="flex-content-container">
+    <main>
+        <section ID="Home">
+            <!-- Section 1 -->
+            <h2>What are you in the mood for?</h2>
+            <div>
+                <!-- I wanted the images to be clickable and to take you to the order page-->
+                <a href=#Order><img src="./img/vertical.png" alt="promotion image"></a>
+            </div>
+            <div>
+                <!-- This is video is mainly like a GIF? Is just a nice image but with a little movement so it seems fancy-->
+                <a target="_blank" href="index2.html">
+                    <video width="1080" height="1920" autoplay muted>
+                        <source src="./img/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video></a>
+            </div>
+        </section>
+        <section>
+            <!-- Section 2 -->
+            <div>
+                <!-- Wanted a horizontal banner at the bottom of the 1st page before the footer later on I combined the 3html file into one so this marks -->
+                <!-- the ending of the first section "HOME"-->
+                <img src="./img/Banner.png" alt="slogan banner">
+            </div>
+        </section>
+        <section id="Order">
+            <!-- Section 3 -->
+            <h3>Build your pizza</h3>
+            <form action="add_to_cart.php" method="POST">
+                <div>
+                    <h3>Step 1: Choose the size</h3>
+                    <input type="radio" id="small" name="size" value="Small" required>
+                    <label for="small">Small</label>
+                    <input type="radio" id="medium" name="size" value="Medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="large" name="size" value="Large" required>
+                    <label for="large">Large</label>
+                </div>
+                <div>
+                    <h4>Step 2: Choose the crust</h4>
+                    <label for="crust">Crust:</label>
+                    <select id="crust" name="crust" required>
+                        <option value="" disabled>Choose crust</option>
+                        <option value="Thin">Thin</option>
+                        <option value="Original">Original</option>
+                        <option value="Deep Dish">Deep Dish</option>
+                    </select>
+                </div>
+                <div>
+                    <h4>Step 3: Choose your toppings</h4>
+                    <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                    <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                    <input type="checkbox" id="tomatoes" name="topping" value="Tomatoes">
+                    <label for="tomatoes">Tomatoes</label>
+                    <input type="checkbox" id="olives" name="topping" value="Olives">
+                    <label for="olives">Olives</label>
+                    <input type="checkbox" id="basil" name="topping" value="Basil">
+                    <label for="basil">Basil</label>
+                    <input type="checkbox" id="cheese" name="topping" value="Cheese">
+                    <label for="cheese">Cheese</label>
+                </div>
+                <div>
+                    <button type="submit">Add to Cart</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="Pay">
+            <!-- Section 4 -->
+            <h3>Pay for your order</h3>
+            <form action="process_payment.php" method="POST">
+                <div>
+                    <h4>Step 4: Personal Information</h4>
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div>
+                    <h4>Step 5: Select your payment method</h4>
+                    <input type="radio" id="card" name="payment_method" value="card" required>
+                    <label for="card">Card Payment</label>
+                    <input type="radio" id="atCounter" name="payment_method" value="atCounter" required>
+                    <label for="atCounter">At Counter</label>
+                </div>
+                <div>
+                    <button type="submit">Submit Payment</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <a target="_self" href=#Home><img src="./img/LOGO.png" alt="Footer LOGO"></a>
+        </div>
+        <div>
+            <menu>
+                <li><a href=#Home>Home</a> </li>
+                <li><a  href=#Order>Order</a> </li>
+                <li><a  href=#Pay>Pay</a> </li>
+            </menu>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
