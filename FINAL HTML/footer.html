@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polaroid</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<div id="meta-data"></div>
+<div id="header-file"></div>
+
+<!-- Main content goes here -->
+
+<div id="footer">
+    <div class="Footer">
+        <div class="Logo">
+            <a href="index.html">
+                <img src="./img/Polaroid-logo.png" alt="footer logo">
+            </a>
+        </div>
+        <div class="menu-form">
+            <!-- Footer menu -->
+            <div class="FooterMenu">
+                <menu>
+                    <li><a href="AboutUs.html" target="_blank">About Us</a></li>
+                    <li><a href="ContactUs.html" target="_blank">Contact Us</a></li>
+                    <li><a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a></li>
+                </menu>
+            </div>
+        </div>
+        <!-- Footer form -->
+        <div class="SuscribeToForm">
+            <form id="footerForm" action="somefile.php" method="POST">
+                <input type="text" placeholder="Name" name="name" required>
+                <span class="error" id="nameError"></span><br>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <span class="error" id="emailError"></span><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Promotional Emails
+                </label><br>
+                <div class="ButtonS">
+                <button type="button" onclick="revealMessage()">Subscribe!</button>
+                <div id="hideM" style="display:none">
+                <p>You have subscribed to the mailing list</p></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
